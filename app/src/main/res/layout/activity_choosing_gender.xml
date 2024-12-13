@@ -8,7 +8,7 @@
     android:background="@drawable/choose_gender_man_background"
     tools:context=".ChoosingGenderActivity">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView3"
         android:layout_width="300dp"
         android:layout_height="67dp"
@@ -28,7 +28,7 @@
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <View
         android:id="@+id/man"
