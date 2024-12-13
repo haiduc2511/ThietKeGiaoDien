@@ -13,7 +13,7 @@
     <!-- Gradient background -->
     <item>
         <layer-list>
-            <item android:drawable="@color/white"/>
+            <item android:drawable="@drawable/button_default_gradient"/>
         </layer-list>
     </item>
 </ripple>
