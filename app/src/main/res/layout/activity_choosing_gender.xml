@@ -49,11 +49,34 @@
         android:layout_height="299dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="18dp"
         android:layout_marginTop="80dp"
+        android:layout_marginEnd="18dp"
         android:background="@drawable/woman"
-        app:layout_constraintStart_toEndOf="@id/man"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/man"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="149dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:text="Man"
+        android:background="@drawable/button_man"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/man"
+        app:layout_constraintStart_toStartOf="@+id/man"
+        app:layout_constraintTop_toBottomOf="@+id/man" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="149dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:text="Woman"
+        app:layout_constraintEnd_toEndOf="@+id/woman"
+        app:layout_constraintStart_toStartOf="@+id/woman"
+        app:layout_constraintTop_toBottomOf="@+id/woman" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
