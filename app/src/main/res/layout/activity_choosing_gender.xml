@@ -57,12 +57,12 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_man"
         android:layout_width="149dp"
         android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:text="Man"
-        android:background="@drawable/button_man"
+        android:background="@drawable/button_man_selector"
         android:textColor="@color/black"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="@+id/man"
@@ -70,11 +70,14 @@
         app:layout_constraintTop_toBottomOf="@+id/man" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bt_woman"
         android:layout_width="149dp"
         android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:text="Woman"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_woman_selector"
         app:layout_constraintEnd_toEndOf="@+id/woman"
         app:layout_constraintStart_toStartOf="@+id/woman"
         app:layout_constraintTop_toBottomOf="@+id/woman" />

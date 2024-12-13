@@ -2,6 +2,7 @@ package com.example.thietkegiaodien
 
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -19,11 +20,31 @@ class ChoosingGenderActivity : AppCompatActivity() {
 
         val cardView = findViewById<CardView>(R.id.cardView3)
         cardView.setOnClickListener {
-            cardView.startAnimation(fadeIn)
+            cardView.startAnimation(slideIn)
         }
         cardView.setOnLongClickListener {
-            cardView.startAnimation(slideIn)
+            cardView.startAnimation(zoomIn)
             false
         }
+
+        val manButton: Button = findViewById(R.id.bt_man)
+        val womanButton: Button = findViewById(R.id.bt_woman)
+        val rootLayout: ConstraintLayout = findViewById(R.id.main)
+
+        manButton.isSelected = true
+        womanButton.isSelected = false
+
+        manButton.setOnClickListener {
+            rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
+            manButton.isSelected = true
+            womanButton.isSelected = false
+        }
+
+        womanButton.setOnClickListener {
+            rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
+            womanButton.isSelected = true
+            manButton.isSelected = false
+        }
+
     }
 }
