@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -32,8 +33,8 @@ class ChoosingGenderActivity : AppCompatActivity() {
         val manButton: Button = findViewById(R.id.bt_man)
         val womanButton: Button = findViewById(R.id.bt_woman)
         val rootLayout: ConstraintLayout = findViewById(R.id.main)
-        val fabTurnLeft: FloatingActionButton = findViewById(R.id.fab_turn_left)
-        val fabTurnRight: FloatingActionButton = findViewById(R.id.fab_turn_right)
+        val fabTurnLeft: ImageButton = findViewById(R.id.fab_turn_left)
+        val fabTurnRight: ImageButton = findViewById(R.id.fab_turn_right)
 
         manButton.isSelected = true
         womanButton.isSelected = false
