@@ -39,8 +39,6 @@ class ChoosingGenderActivity : AppCompatActivity() {
         manButton.isSelected = true
         womanButton.isSelected = false
 
-        fabTurnLeft.setBackgroundResource(R.drawable.button_man)
-        fabTurnRight.setBackgroundResource(R.drawable.button_man)
 
         manButton.setOnClickListener {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
@@ -48,6 +46,8 @@ class ChoosingGenderActivity : AppCompatActivity() {
             womanButton.isSelected = false
             manButton.setTextColor(Color.WHITE)
             womanButton.setTextColor(Color.BLACK)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_man)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_man)
         }
 
         womanButton.setOnClickListener {
@@ -56,6 +56,8 @@ class ChoosingGenderActivity : AppCompatActivity() {
             manButton.isSelected = false
             womanButton.setTextColor(Color.WHITE)
             manButton.setTextColor(Color.BLACK)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_woman)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_woman)
         }
 
     }
