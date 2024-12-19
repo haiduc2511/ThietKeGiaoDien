@@ -27,6 +27,39 @@
             android:textStyle="bold" />
     </com.google.android.material.card.MaterialCardView>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="180dp"
+        android:layout_height="31dp"
+        app:cardCornerRadius="20dp"
+        android:background="@drawable/button_default_gradient"
+        app:layout_constraintStart_toStartOf="@+id/man"
+        app:layout_constraintTop_toBottomOf="@+id/man">
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/man" />
+
+
     <View
         android:id="@+id/man"
         android:layout_width="292dp"
@@ -39,23 +72,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="@+id/man"
-        app:layout_constraintTop_toBottomOf="@+id/man" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/man" />
 
     <ImageButton
         android:id="@+id/fab_turn_left"

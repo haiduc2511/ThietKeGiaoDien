@@ -1,10 +1,12 @@
 package com.example.thietkegiaodien
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.activity.OnBackPressedDispatcher
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -36,11 +38,16 @@ class ChoosingGenderActivity : AppCompatActivity() {
         val fabTurnLeft: ImageButton = findViewById(R.id.fab_turn_left)
         val fabTurnRight: ImageButton = findViewById(R.id.fab_turn_right)
 
+        val sharedPrefs = SharedPreferenceManager(this)
+
         manButton.isSelected = true
         womanButton.isSelected = false
+        sharedPrefs.setString("gender", "man")
 
 
         manButton.setOnClickListener {
+            sharedPrefs.setString("gender", "man")
+
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
             manButton.isSelected = true
             womanButton.isSelected = false
@@ -51,6 +58,8 @@ class ChoosingGenderActivity : AppCompatActivity() {
         }
 
         womanButton.setOnClickListener {
+            sharedPrefs.setString("gender", "woman")
+
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
             womanButton.isSelected = true
             manButton.isSelected = false
@@ -58,6 +67,16 @@ class ChoosingGenderActivity : AppCompatActivity() {
             manButton.setTextColor(Color.BLACK)
             fabTurnLeft.setBackgroundResource(R.drawable.button_turn_woman)
             fabTurnRight.setBackgroundResource(R.drawable.button_turn_woman)
+
+        }
+
+        fabTurnRight.setOnClickListener {
+            Intent(this@ChoosingGenderActivity, ChoosingHeightActivity::class.java).apply{
+                startActivity(this)
+            }
+        }
+        fabTurnLeft.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed();
         }
 
     }
