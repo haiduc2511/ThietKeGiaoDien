@@ -6,9 +6,10 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatDialog
 
-class MyCustomDialog(context: Context) : AppCompatDialog(context) {
+class MyCustomDialog(private val message: String, context: Context) : AppCompatDialog(context) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val view: View = LayoutInflater.from(context).inflate(R.layout.dialog_layout, null)
@@ -16,6 +17,10 @@ class MyCustomDialog(context: Context) : AppCompatDialog(context) {
 
         window?.setBackgroundDrawableResource(android.R.color.transparent)
         window?.setLayout(dpToPx(307), dpToPx(181))
+
+        val tvMessage: TextView = view.findViewById(R.id.tv_message)
+        tvMessage.setText(message)
+
 
 
         val btnClose: Button = view.findViewById(R.id.bt_ok)

@@ -41,6 +41,7 @@ class ChoosingGenderActivity : AppCompatActivity() {
         val sharedPrefs = SharedPreferenceManager(this)
 
         manButton.isSelected = true
+        manButton.setTextColor(Color.WHITE)
         womanButton.isSelected = false
         sharedPrefs.setString("gender", "man")
 
