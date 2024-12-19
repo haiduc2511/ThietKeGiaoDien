@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/man">
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/et_choose_height"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -53,9 +53,11 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="62dp"
+        android:layout_height="31dp"
+        android:text="CM"
+        android:textColor="@color/black"
+        android:backgroundTint="#F5F5F5"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/man" />
 
