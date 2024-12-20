@@ -7,10 +7,33 @@
     android:layout_height="match_parent"
     tools:context=".ChoosingWeightActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:text="Button"
-        style="@style/CustomButtonStyle"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView3"
+        style="@style/CustomHeadlineCardViewStyle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Please specify your parameters."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CustomQuestionCardViewStyle"
+        android:layout_height="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

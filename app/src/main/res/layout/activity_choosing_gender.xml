@@ -9,11 +9,7 @@
     tools:context=".ChoosingGenderActivity">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView3"
-        android:layout_width="300dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="34dp"
-        android:backgroundTint="#80AC62E6"
-        app:cardCornerRadius="20dp"
+        style="@style/CustomHeadlineCardViewStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
