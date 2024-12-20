@@ -34,39 +34,63 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="31dp"
-        android:background="@drawable/button_default_gradient"
+        android:layout_marginTop="38dp"
         android:padding="0dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
 
-        <EditText
-            android:id="@+id/et_choose_weight"
-            style="@style/CustomQuestionEditTextStyle"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="140dp"
+            android:layout_height="31dp"
+            android:background="@drawable/button_default_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            style="@style/CustomUnitButtonStyle"
-            android:padding="0dp"
-            android:text="kg"
+            <EditText
+                android:id="@+id/et_choose_height"
+                style="@style/CustomQuestionEditTextStyle"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/CustomUnitLayoutStyle"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_unit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CM"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
         style="@style/CustomQuestionCardViewStyle"
         android:layout_height="42dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="46dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
@@ -78,31 +102,54 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="31dp"
-        android:background="@drawable/button_default_gradient"
         android:padding="0dp"
+        android:layout_marginTop="38dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
 
-        <EditText
-            android:id="@+id/et_choose_expected_weight"
-            style="@style/CustomQuestionEditTextStyle"
+        <LinearLayout
+            android:id="@id/linearLayout3"
+            android:layout_width="140dp"
+            android:layout_height="31dp"
+            android:background="@drawable/button_default_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            style="@style/CustomUnitButtonStyle"
-            android:padding="0dp"
-            android:text="kg"
+            <EditText
+                style="@style/CustomQuestionEditTextStyle"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/CustomUnitLayoutStyle"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_unit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CM"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -122,33 +169,57 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="250dp"
+        android:id="@+id/constraintLayout"
+        android:layout_width="300dp"
         android:layout_height="31dp"
-        android:background="@drawable/button_default_gradient"
         android:padding="0dp"
+        android:layout_marginTop="38dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
 
-        <EditText
-            android:id="@+id/et_choose_duration"
-            style="@style/CustomQuestionEditTextStyle"
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="140dp"
+            android:layout_height="31dp"
+            android:background="@drawable/button_default_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/bt_week"
-            style="@style/CustomUnitButtonStyle"
-            android:padding="0dp"
-            android:text="week"
+            <EditText
+                style="@style/CustomQuestionEditTextStyle"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/CustomUnitLayoutStyle"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_unit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CM"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <ImageButton
         android:id="@+id/fab_turn_left"
         style="@style/CustomTurnImageButtonStyle"

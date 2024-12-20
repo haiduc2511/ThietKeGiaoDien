@@ -33,28 +33,32 @@
         app:layout_constraintEnd_toEndOf="@+id/man"
         app:layout_constraintStart_toStartOf="@+id/man"
         app:layout_constraintTop_toBottomOf="@+id/man">
+
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="140dp"
             android:layout_height="31dp"
             android:background="@drawable/button_default_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <EditText
                 android:id="@+id/et_choose_height"
-                android:gravity="center"
+                style="@style/CustomQuestionEditTextStyle"
                 android:layout_gravity="center"
-                style="@style/CustomQuestionEditTextStyle" />
+                android:gravity="center" />
 
         </LinearLayout>
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/CustomUnitButtonStyle"
+            style="@style/CustomUnitLayoutStyle"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_unit"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/button_unit">
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
