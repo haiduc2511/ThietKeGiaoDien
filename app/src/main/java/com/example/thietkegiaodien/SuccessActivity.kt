@@ -18,10 +18,10 @@ class SuccessActivity : AppCompatActivity() {
         val sharedPrefs = SharedPreferenceManager(this)
         if (sharedPrefs.getString("gender").equals("man")) {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
-            btStartProgram.setBackgroundResource(R.drawable.button_man)
+            btStartProgram.setBackgroundResource(R.drawable.button_turn_man)
         } else {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
-            btStartProgram.setBackgroundResource(R.drawable.button_woman)
+            btStartProgram.setBackgroundResource(R.drawable.button_turn_woman)
         }
 
     }

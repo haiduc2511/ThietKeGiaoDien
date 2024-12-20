@@ -56,8 +56,9 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:id="@+id/et_choose_height"
+                android:id="@+id/et_weight_now"
                 style="@style/CustomQuestionEditTextStyle"
+                android:inputType="number"
                 android:layout_gravity="center"
                 android:gravity="center" />
 
@@ -125,7 +126,9 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
+                android:id="@+id/et_desired_weight"
                 style="@style/CustomQuestionEditTextStyle"
+                android:inputType="number"
                 android:layout_gravity="center"
                 android:gravity="center" />
 
@@ -191,7 +194,9 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
+                android:id="@+id/et_duration"
                 style="@style/CustomQuestionEditTextStyle"
+                android:inputType="number"
                 android:layout_gravity="center"
                 android:gravity="center" />
 
