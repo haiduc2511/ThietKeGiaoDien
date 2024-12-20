@@ -4,16 +4,16 @@
 
     <!-- Layer nền gradient -->
     <item android:id="@android:id/mask">
-        <shape android:shape="oval">
+        <shape android:shape="rectangle">
             <solid android:color="#40FFFFFF"/>
-            <corners android:radius="100dp"/>
+            <corners android:radius="12dp"/>
         </shape>
     </item>
 
     <!-- Gradient background -->
     <item>
         <layer-list>
-            <item android:drawable="@drawable/button_turn_man_gradient"/>
+            <item android:drawable="@drawable/button_default_gradient"/>
         </layer-list>
     </item>
 </ripple>

@@ -25,39 +25,50 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="180dp"
+        android:layout_width="250dp"
         android:layout_height="31dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="53dp"
-        android:background="@drawable/button_default_gradient"
         android:padding="0dp"
         app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/man"
         app:layout_constraintStart_toStartOf="@+id/man"
         app:layout_constraintTop_toBottomOf="@+id/man">
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="31dp"
+            android:background="@drawable/button_default_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <EditText
+                android:id="@+id/et_choose_height"
+                android:gravity="center"
+                android:layout_gravity="center"
+                style="@style/CustomQuestionEditTextStyle" />
 
-        <EditText
-            android:id="@+id/et_choose_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="text"
-            android:textSize="14sp"
-            android:background="@android:color/transparent"
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/CustomUnitButtonStyle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/button_unit">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CM"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="47dp"
-        style="@style/CustomUnitButtonStyle"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/man" />
 
 
     <View
@@ -75,32 +86,22 @@
 
     <ImageButton
         android:id="@+id/fab_turn_left"
-        android:layout_width="74dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginBottom="30dp"
-        android:clickable="true"
-        android:background="@drawable/button_man"
-        app:tint="@color/black"
-        android:scaleType="fitXY"
+        style="@style/CustomTurnImageButtonStyle"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_turn_left" />
 
     <ImageButton
         android:id="@+id/fab_turn_right"
-        android:layout_width="74dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="21dp"
+        style="@style/CustomTurnImageButtonStyle"
+        android:layout_marginStart="21dp"
         android:layout_marginBottom="30dp"
-        android:clickable="true"
-        android:background="@drawable/button_man"
-        app:tint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:scaleType="fitXY"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         app:srcCompat="@drawable/ic_turn_right" />

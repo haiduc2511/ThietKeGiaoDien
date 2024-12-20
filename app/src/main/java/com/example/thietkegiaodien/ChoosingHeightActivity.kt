@@ -30,7 +30,8 @@ class ChoosingHeightActivity : AppCompatActivity() {
         }
 
         fabTurnRight.setOnClickListener {
-            if (!etChooseHeight.text.toString().equals("hello")) {
+            var height = Integer.parseInt(etChooseHeight.text.toString())
+            if (height < 100 || height > 250) {
                 val myCustomDialog: MyCustomDialog =
                     MyCustomDialog("Please specify a value\n between 100 cm and 250 cm.",this)
                 myCustomDialog.show()
