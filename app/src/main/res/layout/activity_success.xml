@@ -7,4 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".SuccessActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="197dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="81dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_success" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView3"
+        style="@style/CustomHeadlineCardViewStyle"
+        android:layout_width="272dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <TextView
+            style="@style/CustomQuestionTextViewStyle"
+            android:text="Excellent, the program \nwas built successfully. \nWe are ready to start!" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/bt_start_the_program"
+        android:layout_width="149dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="160dp"
+        android:text="Start the program."
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
