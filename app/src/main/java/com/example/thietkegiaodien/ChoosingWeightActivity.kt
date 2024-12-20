@@ -59,5 +59,9 @@ class ChoosingWeightActivity : AppCompatActivity() {
             }
 
         }
+        fabTurnLeft.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed();
+        }
+
     }
 }
