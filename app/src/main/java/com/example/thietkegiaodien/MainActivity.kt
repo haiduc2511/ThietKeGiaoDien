@@ -16,13 +16,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val cvStart: ConstraintLayout = findViewById<ConstraintLayout>(R.id.cv_start_a_new_program)
+        val cvContinue: ConstraintLayout = findViewById<ConstraintLayout>(R.id.cv_continue_the_program)
         cvStart.setOnClickListener {
             Intent(this@MainActivity
                 , ChoosingGenderActivity::class.java).apply {
                 startActivity(this)
             }
         }
-
+        cvContinue.setOnClickListener {
+            Intent(this@MainActivity
+                , TodayPlanActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
 
     }
 }
