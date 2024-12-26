@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import androidx.appcompat.widget.AppCompatSpinner
 import androidx.fragment.app.Fragment
 import com.example.thietkegiaodien.R
 
@@ -35,8 +38,39 @@ class PlanTodayFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plan_today, container, false)
+        val view = inflater.inflate(R.layout.fragment_plan_today, container, false)
+        val spinner = view.findViewById<AppCompatSpinner>(R.id.appCompatSpinner)
+
+        // Array of options
+        val options = arrayOf("< daily norm", "250 kcal to the daily norm.", "> daily norm")
+
+        // Create ArrayAdapter
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, options)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
+
+        // Set Spinner listener
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                // Change Spinner background color based on selected item
+                when (position) {
+                    0 -> spinner.setBackgroundResource(R.drawable.spinner_daily_norm_green_gradient)
+                    1 -> spinner.setBackgroundResource(R.drawable.spinner_daily_norm_yellow_gradient)
+                    2 -> spinner.setBackgroundResource(R.drawable.spinner_daily_norm_red_gradient)
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // No action needed here
+            }
+        }
+
+        return view
     }
 
     companion object {
