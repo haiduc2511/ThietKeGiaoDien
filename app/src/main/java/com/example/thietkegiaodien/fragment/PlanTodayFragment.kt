@@ -1,21 +1,25 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import androidx.fragment.app.Fragment
+import com.example.thietkegiaodien.ARG_PARAM1
+import com.example.thietkegiaodien.ARG_PARAM2
+import com.example.thietkegiaodien.R
 
 /**
  * A simple [Fragment] subclass.
  * Use the [PlanTodayFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+
 class PlanTodayFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
