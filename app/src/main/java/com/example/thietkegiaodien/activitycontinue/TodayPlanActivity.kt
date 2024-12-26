@@ -1,18 +1,16 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.activitycontinue
 
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.LinearLayout
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.fragment.GeneralReportFragment
+import com.example.thietkegiaodien.fragment.PlanTodayFragment
+import com.example.thietkegiaodien.utils.SharedPreferenceManager
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

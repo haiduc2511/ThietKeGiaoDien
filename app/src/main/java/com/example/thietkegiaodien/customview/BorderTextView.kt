@@ -1,4 +1,4 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.customview
 
 import android.content.Context
 import android.graphics.Canvas

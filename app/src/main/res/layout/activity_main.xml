@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cold_launch_background"
-    tools:context=".MainActivity">
+    tools:context=".activitystart.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/button_main_menu_background" >
-            <com.example.thietkegiaodien.BorderTextView
+            <com.example.thietkegiaodien.customview.BorderTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewWithBorder"
@@ -103,7 +103,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/button_main_menu_background">
 
-            <com.example.thietkegiaodien.BorderTextView
+            <com.example.thietkegiaodien.customview.BorderTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_continue"

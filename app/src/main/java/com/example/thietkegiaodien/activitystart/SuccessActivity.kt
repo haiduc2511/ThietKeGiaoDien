@@ -1,15 +1,13 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.activitystart
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.activitycontinue.TodayPlanActivity
+import com.example.thietkegiaodien.utils.SharedPreferenceManager
 
 class SuccessActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

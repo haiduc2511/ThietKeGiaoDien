@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/choose_gender_man_background"
-    tools:context=".ChoosingGenderActivity">
+    tools:context=".activitystart.ChoosingGenderActivity">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView3"
         style="@style/CustomHeadlineCardViewStyle"

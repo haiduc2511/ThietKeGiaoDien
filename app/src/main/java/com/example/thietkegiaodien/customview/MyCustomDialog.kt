@@ -1,4 +1,4 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.customview
 
 import android.content.Context
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDialog
+import com.example.thietkegiaodien.R
 
 class MyCustomDialog(private val message: String, context: Context) : AppCompatDialog(context) {
     override fun onCreate(savedInstanceState: Bundle?) {

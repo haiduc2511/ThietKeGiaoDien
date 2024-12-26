@@ -1,14 +1,14 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.activitystart
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.customview.MyCustomDialog
+import com.example.thietkegiaodien.utils.SharedPreferenceManager
 
 class ChoosingHeightActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

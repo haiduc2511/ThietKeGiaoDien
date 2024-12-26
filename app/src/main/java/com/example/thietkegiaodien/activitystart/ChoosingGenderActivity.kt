@@ -1,4 +1,4 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.activitystart
 
 import android.content.Intent
 import android.graphics.Color
@@ -6,14 +6,11 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageButton
-import androidx.activity.OnBackPressedDispatcher
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.utils.SharedPreferenceManager
 
 class ChoosingGenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

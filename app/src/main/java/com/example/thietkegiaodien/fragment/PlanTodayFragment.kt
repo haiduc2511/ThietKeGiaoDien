@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.thietkegiaodien.ARG_PARAM1
-import com.example.thietkegiaodien.ARG_PARAM2
 import com.example.thietkegiaodien.R
 
 /**

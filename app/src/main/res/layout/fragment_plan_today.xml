@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".PlanTodayFragment">
+    tools:context=".fragment.PlanTodayFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TodayPlanActivity">
+        tools:context=".activitycontinue.TodayPlanActivity">
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardView3"
             android:layout_height="95dp"

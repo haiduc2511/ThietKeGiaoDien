@@ -1,4 +1,4 @@
-package com.example.thietkegiaodien
+package com.example.thietkegiaodien.utils
 
 import android.content.Context
 import android.content.SharedPreferences
