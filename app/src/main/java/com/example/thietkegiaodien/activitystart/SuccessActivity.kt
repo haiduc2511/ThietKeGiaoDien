@@ -14,17 +14,17 @@ class SuccessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success)
         val rootLayout: ConstraintLayout = findViewById(R.id.main)
-        val btStartProgram: TextView = findViewById(R.id.bt_start_the_program)
+        val constraintLayout: ConstraintLayout = findViewById(R.id.constraintLayout)
         val sharedPrefs = SharedPreferenceManager(this)
         if (sharedPrefs.getString("gender").equals("man")) {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
-            btStartProgram.setBackgroundResource(R.drawable.button_turn_man)
+            constraintLayout.setBackgroundResource(R.drawable.button_man)
         } else {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
-            btStartProgram.setBackgroundResource(R.drawable.button_turn_woman)
+            constraintLayout.setBackgroundResource(R.drawable.button_turn_woman)
         }
 
-        btStartProgram.setOnClickListener {
+        constraintLayout.setOnClickListener {
             Intent(this@SuccessActivity,
                 TodayPlanActivity::class.java).apply{
                 startActivity(this)

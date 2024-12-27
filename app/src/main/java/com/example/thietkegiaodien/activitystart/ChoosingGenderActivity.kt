@@ -41,6 +41,8 @@ class ChoosingGenderActivity : AppCompatActivity() {
         manButton.setTextColor(Color.WHITE)
         womanButton.isSelected = false
         sharedPrefs.setString("gender", "man")
+        fabTurnLeft.setBackgroundResource(R.drawable.button_turn_man)
+        fabTurnRight.setBackgroundResource(R.drawable.button_turn_man)
 
 
         manButton.setOnClickListener {

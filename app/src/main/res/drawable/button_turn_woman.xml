@@ -4,9 +4,8 @@
 
     <!-- Layer nền gradient -->
     <item android:id="@android:id/mask">
-        <shape android:shape="rectangle">
+        <shape android:shape="oval">
             <solid android:color="#40FFFFFF"/>
-            <corners android:radius="100dp"/>
         </shape>
     </item>
 
