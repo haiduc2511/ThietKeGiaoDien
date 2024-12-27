@@ -7,8 +7,11 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.widget.AppCompatSpinner
+import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.utils.SharedPreferenceManager
 
 /**
  * A simple [Fragment] subclass.
@@ -69,6 +72,15 @@ class PlanTodayFragment : Fragment() {
                 // No action needed here
             }
         }
+
+        val btHistoryOfNutrition = view.findViewById<ConstraintLayout>(R.id.cardView6)
+        val sharedPrefs = SharedPreferenceManager(requireContext())
+        if (sharedPrefs.getString("gender").equals("man")) {
+            btHistoryOfNutrition.setBackgroundResource(R.drawable.button_man)
+        } else {
+            btHistoryOfNutrition.setBackgroundResource(R.drawable.button_woman_2)
+        }
+
 
         return view
     }
