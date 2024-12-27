@@ -1,13 +1,18 @@
 package com.example.thietkegiaodien.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.widget.addTextChangedListener
 import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.activitycontinue.CompletedProgramActivity
+import com.example.thietkegiaodien.utils.SharedPreferenceManager
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,9 +55,20 @@ class GeneralReportFragment : Fragment() {
             // Cập nhật nội dung tùy chỉnh
             val textView = customView.findViewById<TextView>(R.id.tv_message) // ID trong custom_view_general_report
             textView.text = title
+            if (title.equals("Days left")) {
+                val editText = customView.findViewById<EditText>(R.id.et_choose_height)
+                editText.addTextChangedListener {
+                    if (editText.text.toString().equals("0")) {
+                        Intent(requireContext(), CompletedProgramActivity::class.java).apply {
+                            startActivity(this)
+                        }
+                    }
+                }
+            }
 
             linearLayout.addView(customView)
         }
+
         return view
     }
 
