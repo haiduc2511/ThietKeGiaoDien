@@ -10,18 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical">
-        <include
-            android:id="@+id/custom_view_1"
-            layout="@layout/custom_view_general_report"/>
-        <include
-            android:id="@+id/custom_view_2"
-            layout="@layout/custom_view_general_report"/>
-        <include
-            android:id="@+id/custom_view_3"
-            layout="@layout/custom_view_general_report"/>
-        <include
-            android:id="@+id/custom_view_4"
-            layout="@layout/custom_view_general_report"/>
 
     </LinearLayout>
 
