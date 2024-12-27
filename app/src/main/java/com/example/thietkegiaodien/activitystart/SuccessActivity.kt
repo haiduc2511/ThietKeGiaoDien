@@ -21,7 +21,7 @@ class SuccessActivity : AppCompatActivity() {
             constraintLayout.setBackgroundResource(R.drawable.button_man)
         } else {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
-            constraintLayout.setBackgroundResource(R.drawable.button_turn_woman)
+            constraintLayout.setBackgroundResource(R.drawable.button_woman_2)
         }
 
         constraintLayout.setOnClickListener {
