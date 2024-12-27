@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.example.thietkegiaodien.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +37,23 @@ class GeneralReportFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_general_report, container, false)
+        val view = inflater.inflate(R.layout.fragment_general_report, container, false)
+        val linearLayout = view.findViewById<LinearLayout>(R.id.linearLayout)
+
+        // Danh sách dữ liệu (ví dụ: tiêu đề cho mỗi custom view)
+        val titles = listOf("Completed days", "Days left", "Burned", "Current weight")
+
+        // Inflate và thêm từng custom view vào LinearLayout
+        for (title in titles) {
+            val customView = inflater.inflate(R.layout.custom_view_general_report, linearLayout, false)
+
+            // Cập nhật nội dung tùy chỉnh
+            val textView = customView.findViewById<TextView>(R.id.tv_message) // ID trong custom_view_general_report
+            textView.text = title
+
+            linearLayout.addView(customView)
+        }
+        return view
     }
 
     companion object {

@@ -4,11 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.GeneralReportFragment">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/custom_view_1"
+            layout="@layout/custom_view_general_report"/>
+        <include
+            android:id="@+id/custom_view_2"
+            layout="@layout/custom_view_general_report"/>
+        <include
+            android:id="@+id/custom_view_3"
+            layout="@layout/custom_view_general_report"/>
+        <include
+            android:id="@+id/custom_view_4"
+            layout="@layout/custom_view_general_report"/>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    </LinearLayout>
 
 </FrameLayout>
