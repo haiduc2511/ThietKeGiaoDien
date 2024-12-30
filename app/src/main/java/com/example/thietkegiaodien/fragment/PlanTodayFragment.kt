@@ -1,5 +1,6 @@
 package com.example.thietkegiaodien.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.activitycontinue.TrackDietActivity
 import com.example.thietkegiaodien.utils.SharedPreferenceManager
 
 /**
@@ -79,6 +81,12 @@ class PlanTodayFragment : Fragment() {
             btHistoryOfNutrition.setBackgroundResource(R.drawable.button_man)
         } else {
             btHistoryOfNutrition.setBackgroundResource(R.drawable.button_woman_2)
+        }
+
+        btHistoryOfNutrition.setOnClickListener {
+            Intent(requireContext(), TrackDietActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
 
