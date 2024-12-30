@@ -1,5 +1,6 @@
 package com.example.thietkegiaodien.activitycontinue
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
@@ -7,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.thietkegiaodien.R
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -37,6 +39,13 @@ class TrackDietActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = FoodAdapter(foodList)
+
+        val btAdd = findViewById<ConstraintLayout>(R.id.cardView6)
+        btAdd.setOnClickListener {
+            Intent(this@TrackDietActivity, FoodCategoryActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
 
     }
 }
