@@ -1,6 +1,7 @@
 package com.example.thietkegiaodien.activitycontinue
 
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -18,10 +19,17 @@ class FoodCategoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_food_category)
         val rootLayout: ConstraintLayout = findViewById(R.id.main)
         val sharedPrefs = SharedPreferenceManager(this)
+        val fabTurnLeft: ImageButton = findViewById(R.id.fab_turn_left)
+        val fabTurnRight: ImageButton = findViewById(R.id.fab_turn_right)
         if (sharedPrefs.getString("gender").equals("man")) {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_man)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_man)
+
         } else {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_woman)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_woman)
         }
 
         // Sample categories and icons

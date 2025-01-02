@@ -2,6 +2,7 @@ package com.example.thietkegiaodien.activitycontinue
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
@@ -22,10 +23,20 @@ class TrackDietActivity : AppCompatActivity() {
         setContentView(R.layout.activity_track_diet)
         val rootLayout: ConstraintLayout = findViewById(R.id.main)
         val sharedPrefs = SharedPreferenceManager(this)
+        val fabTurnLeft: ImageButton = findViewById(R.id.fab_turn_left)
+        val fabTurnRight: ImageButton = findViewById(R.id.fab_turn_right)
+        val cvAdd: ConstraintLayout = findViewById(R.id.cardView6)
         if (sharedPrefs.getString("gender").equals("man")) {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_man)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_man)
+            cvAdd.setBackgroundResource(R.drawable.button_man)
+
         } else {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_woman)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_woman)
+            cvAdd.setBackgroundResource(R.drawable.button_woman_2)
         }
 
         val foodList = listOf(

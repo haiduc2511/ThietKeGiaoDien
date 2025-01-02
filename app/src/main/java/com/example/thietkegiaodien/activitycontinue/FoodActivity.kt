@@ -1,9 +1,11 @@
 package com.example.thietkegiaodien.activitycontinue
 
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,7 @@ import com.example.thietkegiaodien.adapter.Food2Adapter
 import com.example.thietkegiaodien.adapter.FoodAdapter
 import com.example.thietkegiaodien.model.Food2Model
 import com.example.thietkegiaodien.model.FoodModel
+import com.example.thietkegiaodien.utils.SharedPreferenceManager
 
 class FoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +25,21 @@ class FoodActivity : AppCompatActivity() {
         val category: String? = intent.getStringExtra("Category")
         val tvCategory: TextView = findViewById(R.id.tv_category)
         tvCategory.setText(category)
+
+        val rootLayout: ConstraintLayout = findViewById(R.id.main)
+        val sharedPrefs = SharedPreferenceManager(this)
+        val fabTurnLeft: ImageButton = findViewById(R.id.fab_turn_left)
+        val fabTurnRight: ImageButton = findViewById(R.id.fab_turn_right)
+        if (sharedPrefs.getString("gender").equals("man")) {
+            rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_man)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_man)
+
+        } else {
+            rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
+            fabTurnLeft.setBackgroundResource(R.drawable.button_turn_woman)
+            fabTurnRight.setBackgroundResource(R.drawable.button_turn_woman)
+        }
 
         val foodList = listOf(
             Food2Model("Banana", 95),
