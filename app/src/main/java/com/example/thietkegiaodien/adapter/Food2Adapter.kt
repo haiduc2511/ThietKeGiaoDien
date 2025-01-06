@@ -6,8 +6,11 @@ import com.example.thietkegiaodien.model.FoodModel
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.thietkegiaodien.R
+import com.example.thietkegiaodien.customview.MyCustomDialog
+import com.example.thietkegiaodien.customview.MyCustomDialog2
 import com.example.thietkegiaodien.model.Food2Model
 
 class Food2Adapter(private val food2List: List<Food2Model>) :
@@ -17,6 +20,7 @@ class Food2Adapter(private val food2List: List<Food2Model>) :
     class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvFoodName: TextView = itemView.findViewById(R.id.tvFoodName)
         val tvFoodCalories: TextView = itemView.findViewById(R.id.tvFoodCalories)
+        val ivAdd: ImageView = itemView.findViewById(R.id.imageView3)
     }
 
     // Inflate the item layout and create ViewHolder
@@ -31,6 +35,9 @@ class Food2Adapter(private val food2List: List<Food2Model>) :
         val food = food2List[position]
         holder.tvFoodName.text = food.name
         holder.tvFoodCalories.text = "${food.numberOfCaloriesPer100r} Kcal"
+        holder.ivAdd.setOnClickListener {
+            MyCustomDialog2(holder.itemView.context).show()
+        }
     }
 
     // Return the total number of items

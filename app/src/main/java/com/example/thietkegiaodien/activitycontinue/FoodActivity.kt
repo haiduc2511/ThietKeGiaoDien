@@ -1,6 +1,8 @@
 package com.example.thietkegiaodien.activitycontinue
 
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.thietkegiaodien.R
@@ -34,7 +37,6 @@ class FoodActivity : AppCompatActivity() {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
             fabTurnLeft.setBackgroundResource(R.drawable.button_turn_man)
             fabTurnRight.setBackgroundResource(R.drawable.button_turn_man)
-
         } else {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
             fabTurnLeft.setBackgroundResource(R.drawable.button_turn_woman)
@@ -56,6 +58,17 @@ class FoodActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = Food2Adapter(foodList)
 
+        val vlNoItems: ConstraintLayout = findViewById(R.id.cl_no_items)
 
+        val etSearch: EditText = findViewById(R.id.searchEditText)
+        etSearch.addTextChangedListener {
+            if (!it.toString().equals("")) {
+                recyclerView.visibility = View.GONE
+                vlNoItems.visibility = View.VISIBLE
+            } else {
+                recyclerView.visibility = View.VISIBLE
+                vlNoItems.visibility = View.GONE
+            }
+        }
     }
 }

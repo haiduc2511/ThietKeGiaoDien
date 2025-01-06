@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_delete" />
+        app:srcCompat="@drawable/img_add" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
