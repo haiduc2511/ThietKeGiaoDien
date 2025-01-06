@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".activitycontinue.ChooseWeightActivity2">
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardView3"
+    style="@style/CustomHeadlineCardViewStyle"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        style="@style/CustomQuestionTextViewStyle"
+        android:text="Please specify your parameters." />
+</com.google.android.material.card.MaterialCardView>
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/materialCardView3"
+    style="@style/CustomQuestionCardViewStyle"
+    android:layout_height="42dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+    <TextView
+        style="@style/CustomQuestionTextViewStyle"
+        android:text="How much do you weigh now?" />
+
+
+</com.google.android.material.card.MaterialCardView>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout2"
+    android:layout_width="300dp"
+    android:layout_height="31dp"
+    android:layout_marginTop="38dp"
+    android:padding="0dp"
+    app:cardCornerRadius="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="204dp"
+        android:layout_height="31dp"
+        android:background="@drawable/button_default_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_weight_now"
+            style="@style/CustomQuestionEditTextStyle"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/CustomUnitLayoutStyle"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_unit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/materialCardView2"
+    style="@style/CustomQuestionCardViewStyle"
+    android:layout_height="42dp"
+    android:layout_marginTop="46dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+    <TextView
+        style="@style/CustomQuestionTextViewStyle"
+        android:text="How much do you want to weigh?" />
+
+
+</com.google.android.material.card.MaterialCardView>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout3"
+    android:layout_width="300dp"
+    android:layout_height="31dp"
+    android:padding="0dp"
+    android:layout_marginTop="38dp"
+    app:cardCornerRadius="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.503"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+    <LinearLayout
+        android:id="@id/linearLayout3"
+        android:layout_width="204dp"
+        android:layout_height="31dp"
+        android:background="@drawable/button_default_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_desired_weight"
+            style="@style/CustomQuestionEditTextStyle"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/CustomUnitLayoutStyle"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_unit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/materialCardView4"
+    style="@style/CustomQuestionCardViewStyle"
+    android:layout_height="42dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.504"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+    <TextView
+        style="@style/CustomQuestionTextViewStyle"
+        android:text="Duration of the program" />
+
+
+</com.google.android.material.card.MaterialCardView>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="300dp"
+    android:layout_height="31dp"
+    android:padding="0dp"
+    android:layout_marginTop="38dp"
+    app:cardCornerRadius="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="204dp"
+        android:layout_height="31dp"
+        android:background="@drawable/button_default_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_duration"
+            style="@style/CustomQuestionEditTextStyle"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/CustomUnitLayoutStyle"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_unit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="week"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<ImageButton
+    android:id="@+id/fab_turn_left"
+    style="@style/CustomTurnImageButtonStyle"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    android:layout_marginStart="21dp"
+    android:layout_marginBottom="30dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/ic_turn_left" />
+
+<ImageButton
+    android:id="@+id/fab_turn_right"
+    style="@style/CustomTurnImageButtonStyle"
+    android:layout_marginEnd="21dp"
+    android:layout_marginBottom="30dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    app:srcCompat="@drawable/ic_turn_right" />
+</androidx.constraintlayout.widget.ConstraintLayout>

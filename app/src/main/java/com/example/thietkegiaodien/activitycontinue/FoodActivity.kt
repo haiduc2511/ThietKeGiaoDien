@@ -1,5 +1,6 @@
 package com.example.thietkegiaodien.activitycontinue
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -33,14 +34,17 @@ class FoodActivity : AppCompatActivity() {
         val sharedPrefs = SharedPreferenceManager(this)
         val fabTurnLeft: ImageButton = findViewById(R.id.fab_turn_left)
         val fabTurnRight: ImageButton = findViewById(R.id.fab_turn_right)
+        val cvAdd: ConstraintLayout = findViewById(R.id.cardView6)
         if (sharedPrefs.getString("gender").equals("man")) {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_man_background)
             fabTurnLeft.setBackgroundResource(R.drawable.button_turn_man)
             fabTurnRight.setBackgroundResource(R.drawable.button_turn_man)
+            cvAdd.setBackgroundResource(R.drawable.button_man)
         } else {
             rootLayout.setBackgroundResource(R.drawable.choose_gender_woman_background)
             fabTurnLeft.setBackgroundResource(R.drawable.button_turn_woman)
             fabTurnRight.setBackgroundResource(R.drawable.button_turn_woman)
+            cvAdd.setBackgroundResource(R.drawable.button_woman_2)
         }
 
         val foodList = listOf(
@@ -68,6 +72,12 @@ class FoodActivity : AppCompatActivity() {
             } else {
                 recyclerView.visibility = View.VISIBLE
                 vlNoItems.visibility = View.GONE
+            }
+        }
+
+        cvAdd.setOnClickListener {
+            Intent(this@FoodActivity, ChooseWeightActivity2::class.java).apply {
+                startActivity(this)
             }
         }
     }
