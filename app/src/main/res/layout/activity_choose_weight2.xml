@@ -16,7 +16,7 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
 
     <TextView
         style="@style/CustomQuestionTextViewStyle"
-        android:text="Please specify your parameters." />
+        android:text="Specify the dish parameters." />
 </com.google.android.material.card.MaterialCardView>
 
 <com.google.android.material.card.MaterialCardView
@@ -29,7 +29,7 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
 
     <TextView
         style="@style/CustomQuestionTextViewStyle"
-        android:text="How much do you weigh now?" />
+        android:text="Name of the dish" />
 
 
 </com.google.android.material.card.MaterialCardView>
@@ -48,7 +48,7 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="204dp"
+        android:layout_width="match_parent"
         android:layout_height="31dp"
         android:background="@drawable/button_default_gradient"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,25 +65,6 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
     </LinearLayout>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/CustomUnitLayoutStyle"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/button_unit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="kg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -98,7 +79,7 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
 
     <TextView
         style="@style/CustomQuestionTextViewStyle"
-        android:text="How much do you want to weigh?" />
+        android:text="Caloric content of the dish" />
 
 
 </com.google.android.material.card.MaterialCardView>
@@ -146,7 +127,7 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="kg"
+            android:text="Kcal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +148,7 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
 
     <TextView
         style="@style/CustomQuestionTextViewStyle"
-        android:text="Duration of the program" />
+        android:text="Dish category" />
 
 
 </com.google.android.material.card.MaterialCardView>
@@ -186,7 +167,7 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="204dp"
+        android:layout_width="match_parent"
         android:layout_height="31dp"
         android:background="@drawable/button_default_gradient"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -201,26 +182,6 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
             android:gravity="center" />
 
     </LinearLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/CustomUnitLayoutStyle"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/button_unit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="week"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -237,6 +198,21 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
     app:srcCompat="@drawable/ic_turn_left" />
 
 <ImageButton
+    android:id="@+id/fab_home"
+    style="@style/CustomTurnImageButtonStyle"
+    android:layout_width="85dp"
+    android:layout_height="66dp"
+    android:layout_marginBottom="28dp"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    android:layout_marginEnd="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/ic_home" />
+
+
+    <ImageButton
     android:id="@+id/fab_turn_right"
     style="@style/CustomTurnImageButtonStyle"
     android:layout_marginEnd="21dp"
@@ -246,4 +222,5 @@ tools:context=".activitycontinue.ChooseWeightActivity2">
     android:paddingHorizontal="20dp"
     android:paddingVertical="10dp"
     app:srcCompat="@drawable/ic_turn_right" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

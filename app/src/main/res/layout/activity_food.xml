@@ -61,7 +61,7 @@
         app:srcCompat="@drawable/ic_turn_left" />
 
     <ImageButton
-        android:id="@+id/fab_turn_right"
+        android:id="@+id/fab_home"
         style="@style/CustomTurnImageButtonStyle"
         android:layout_width="85dp"
         android:layout_height="66dp"
