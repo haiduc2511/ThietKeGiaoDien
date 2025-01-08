@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.thietkegiaodien.R
@@ -51,12 +52,14 @@ class TodayPlanActivity : AppCompatActivity() {
             clGeneralReport.isSelected = false
             tvTodayPlan.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.white))
             tvGeneralReport.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.black))
+            viewPager.setCurrentItem(0, true)
         }
         clGeneralReport.setOnClickListener {
             clTodayPlan.isSelected = false
             clGeneralReport.isSelected = true
             tvTodayPlan.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.black))
             tvGeneralReport.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.white))
+            viewPager.setCurrentItem(1, true)
         }
 
         val fragments = listOf(
@@ -72,6 +75,23 @@ class TodayPlanActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(this, fragments)
         viewPager.adapter = adapter
 
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == 0) {
+                    clTodayPlan.isSelected = true
+                    clGeneralReport.isSelected = false
+                    tvTodayPlan.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.white))
+                    tvGeneralReport.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.black))
+                } else {
+                    clTodayPlan.isSelected = false
+                    clGeneralReport.isSelected = true
+                    tvTodayPlan.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.black))
+                    tvGeneralReport.setTextColor(ContextCompat.getColor(this@TodayPlanActivity, R.color.white))
+                }
+
+            }
+        })
 
     }
 
