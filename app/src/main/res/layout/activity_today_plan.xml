@@ -22,6 +22,15 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingEnd="0dp"
+        app:tabPaddingBottom="0dp"
+        app:tabPaddingTop="0dp"
+        app:tabIndicatorHeight="0dp"
+        app:tabIndicatorColor="@android:color/transparent"
         app:tabGravity="fill"
         app:tabMode="fixed"/>
 </LinearLayout>

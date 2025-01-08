@@ -1,7 +1,10 @@
 package com.example.thietkegiaodien.activitycontinue
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -42,9 +45,14 @@ class TodayPlanActivity : AppCompatActivity() {
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = titles[position]
+            tab.customView = createCustomTab(titles[position])
         }.attach()
 
+    }
+    private fun createCustomTab(title: String): View {
+        val tabView = LayoutInflater.from(this).inflate(R.layout.custom_tab, null)
+        tabView.findViewById<TextView>(R.id.tabTitle).text = title
+        return tabView
     }
 
     class ViewPagerAdapter(
