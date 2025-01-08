@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/custom_tablayout_gradient"
+    android:id="@+id/main_custom_tab_layout"
+    android:background="@drawable/custom_tablayout_man_selector"
     android:padding="12dp">
 
     <TextView
